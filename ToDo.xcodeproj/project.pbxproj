@@ -189,9 +189,11 @@
 				TargetAttributes = {
 					BC992742214B16AD00FC4B9C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					BC992756214B16AF00FC4B9C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = BC992742214B16AD00FC4B9C;
 					};
 				};
@@ -419,7 +421,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mike.pujol.ToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -437,7 +439,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mike.pujol.ToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -457,7 +459,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mike.pujol.ToDoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDo.app/ToDo";
 			};
@@ -478,7 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mike.pujol.ToDoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDo.app/ToDo";
 			};

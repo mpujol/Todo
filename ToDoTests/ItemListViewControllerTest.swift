@@ -19,7 +19,7 @@ class ItemListViewControllerTest: XCTestCase {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let viewController = storyboard.instantiateViewController(withIdentifier: "ItemListViewController")
-        sut = viewController as! ItemListViewController
+        sut = viewController as? ItemListViewController
         sut.loadViewIfNeeded()
     }
     
@@ -44,9 +44,6 @@ class ItemListViewControllerTest: XCTestCase {
                        sut.tableView.delegate as? ItemListDataProvider)
     }
 }
-
-
-
 
 
 
