@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC336F242151CB200079E6AC /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC336F232151CB200079E6AC /* ItemCellTests.swift */; };
 		BC397679214B2189004E6796 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC397678214B2189004E6796 /* Location.swift */; };
 		BC39767B214B2304004E6796 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC39767A214B2304004E6796 /* LocationTests.swift */; };
 		BC39767D214B2872004E6796 /* ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC39767C214B2872004E6796 /* ManagerTests.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC336F232151CB200079E6AC /* ItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
 		BC397678214B2189004E6796 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BC39767A214B2304004E6796 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		BC39767C214B2872004E6796 /* ManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerTests.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		BC99275A214B16AF00FC4B9C /* ToDoTests */ = {
 			isa = PBXGroup;
 			children = (
+				BC336F232151CB200079E6AC /* ItemCellTests.swift */,
 				BC4F8A98214DBE3B00FD49DA /* ItemListDataProviderTests.swift */,
 				BC49A777214C85C500262FB2 /* ItemListViewControllerTest.swift */,
 				BC39767A214B2304004E6796 /* LocationTests.swift */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC336F242151CB200079E6AC /* ItemCellTests.swift in Sources */,
 				BC4F8A99214DBE3B00FD49DA /* ItemListDataProviderTests.swift in Sources */,
 				BC39767B214B2304004E6796 /* LocationTests.swift in Sources */,
 				BC992767214B1AE600FC4B9C /* ToDoItemTests.swift in Sources */,
