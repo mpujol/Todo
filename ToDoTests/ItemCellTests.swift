@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import ToDo
 
 class ItemCellTests: XCTestCase {
@@ -25,7 +26,7 @@ class ItemCellTests: XCTestCase {
         tableView = controller.tableView
         tableView.dataSource = dataSource
         
-        cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: IndexPath(row: 0, section: 0)) as! ItemCell
+        cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: IndexPath(row: 0, section: 0)) as? ItemCell
     }
 
     override func tearDown() {
@@ -62,6 +63,25 @@ class ItemCellTests: XCTestCase {
         XCTAssertEqual(cell.dateLabel.text, "08/27/2017")
     }
     
+    func test_ConfigCell_SetsLocation() {
+        
+        cell.configCell(with: ToDoItem(title: "Foo", location: Location(name: "Bar")))
+        
+        
+        
+        XCTAssertEqual(cell.locationLabel.text, "Bar")
+    }
+    
+    func test_Title_WhenItemIsChecked_IsStrokeThrough() {
+        let location = Location(name: "Bar")
+        let item = ToDoItem(title: "Foo", itemDescription: nil, timestamp: 145615025, location: location)
+        cell.configCell(with: item, checked: true)
+        
+        let attributedString = NSAttributedString(string: "Foo", attributes: [NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.single.rawValue])
+        XCTAssertEqual(cell.titleLabel.attributedText, attributedString)
+        XCTAssertNil(cell.locationLabel.text)
+        XCTAssertNil(cell.dateLabel.text)
+    }
 }
 
 
