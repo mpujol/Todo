@@ -103,7 +103,9 @@
 		BC4F8A9C214DC70200FD49DA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BC4F8A9A214DC6FE00FD49DA /* ItemCell.swift */,
+				BC49A779214C879E00262FB2 /* ItemListViewController.swift */,
+				BC82C01E2159969900E7C23A /* InputViewController.swift */,
+				BCF49F1F2155D80500243EE6 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,10 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				BCEA5984215AEFD6003BECFF /* Extensions */,
+				BCB58A51215B1CA4000499C1 /* View */,
 				BC4F8A9C214DC70200FD49DA /* Controller */,
-				BC49A779214C879E00262FB2 /* ItemListViewController.swift */,
-				BC82C01E2159969900E7C23A /* InputViewController.swift */,
-				BCF49F1F2155D80500243EE6 /* DetailViewController.swift */,
 				BC397681214B296B004E6796 /* Model */,
 				BC992746214B16AD00FC4B9C /* AppDelegate.swift */,
 				BC99274A214B16AD00FC4B9C /* Main.storyboard */,
@@ -167,6 +167,14 @@
 				BC99275D214B16AF00FC4B9C /* Info.plist */,
 			);
 			path = ToDoTests;
+			sourceTree = "<group>";
+		};
+		BCB58A51215B1CA4000499C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC4F8A9A214DC6FE00FD49DA /* ItemCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BCEA5984215AEFD6003BECFF /* Extensions */ = {
