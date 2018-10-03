@@ -18,6 +18,7 @@
 		BC49A77C214C8C4000262FB2 /* ItemListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC49A77B214C8C4000262FB2 /* ItemListDataProvider.swift */; };
 		BC4F8A99214DBE3B00FD49DA /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F8A98214DBE3B00FD49DA /* ItemListDataProviderTests.swift */; };
 		BC4F8A9B214DC6FE00FD49DA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4F8A9A214DC6FE00FD49DA /* ItemCell.swift */; };
+		BC7DF7EA2162D27500A10C18 /* StoryBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7DF7E92162D27500A10C18 /* StoryBoardTests.swift */; };
 		BC82C01B2159884900E7C23A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC82C01A2159884900E7C23A /* MapKit.framework */; };
 		BC82C01F2159969900E7C23A /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC82C01E2159969900E7C23A /* InputViewController.swift */; };
 		BC82C0212159979400E7C23A /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC82C0202159979400E7C23A /* InputViewControllerTests.swift */; };
@@ -56,6 +57,7 @@
 		BC49A77B214C8C4000262FB2 /* ItemListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProvider.swift; sourceTree = "<group>"; };
 		BC4F8A98214DBE3B00FD49DA /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
 		BC4F8A9A214DC6FE00FD49DA /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		BC7DF7E92162D27500A10C18 /* StoryBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardTests.swift; sourceTree = "<group>"; };
 		BC82C01A2159884900E7C23A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BC82C01E2159969900E7C23A /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		BC82C0202159979400E7C23A /* InputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewControllerTests.swift; sourceTree = "<group>"; };
@@ -164,12 +166,11 @@
 		BC99275A214B16AF00FC4B9C /* ToDoTests */ = {
 			isa = PBXGroup;
 			children = (
+				BC7DF7E92162D27500A10C18 /* StoryBoardTests.swift */,
 				BCB58A52215B3ADD000499C1 /* APIClientTests.swift */,
-				BC82C0202159979400E7C23A /* InputViewControllerTests.swift */,
-				BCF49F212155D83700243EE6 /* DetailViewControllerTests.swift */,
+				BCE1C0D3216426FA002F31D0 /* Controller */,
 				BC336F232151CB200079E6AC /* ItemCellTests.swift */,
 				BC4F8A98214DBE3B00FD49DA /* ItemListDataProviderTests.swift */,
-				BC49A777214C85C500262FB2 /* ItemListViewControllerTest.swift */,
 				BC39767A214B2304004E6796 /* LocationTests.swift */,
 				BC992766214B1AE600FC4B9C /* ToDoItemTests.swift */,
 				BC39767C214B2872004E6796 /* ManagerTests.swift */,
@@ -184,6 +185,16 @@
 				BC4F8A9A214DC6FE00FD49DA /* ItemCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BCE1C0D3216426FA002F31D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC49A777214C85C500262FB2 /* ItemListViewControllerTest.swift */,
+				BC82C0202159979400E7C23A /* InputViewControllerTests.swift */,
+				BCF49F212155D83700243EE6 /* DetailViewControllerTests.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		BCEA5984215AEFD6003BECFF /* Extensions */ = {
@@ -325,6 +336,7 @@
 				BC4F8A99214DBE3B00FD49DA /* ItemListDataProviderTests.swift in Sources */,
 				BC39767B214B2304004E6796 /* LocationTests.swift in Sources */,
 				BC82C0212159979400E7C23A /* InputViewControllerTests.swift in Sources */,
+				BC7DF7EA2162D27500A10C18 /* StoryBoardTests.swift in Sources */,
 				BC992767214B1AE600FC4B9C /* ToDoItemTests.swift in Sources */,
 				BCF49F222155D83700243EE6 /* DetailViewControllerTests.swift in Sources */,
 				BCB58A53215B3ADD000499C1 /* APIClientTests.swift in Sources */,

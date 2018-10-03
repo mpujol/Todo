@@ -122,8 +122,7 @@ extension APIClientTests {
             print(url)
             dataTask.completionHandler = completionHandler
             return dataTask
-            
-            
+    
         }
     }
     
