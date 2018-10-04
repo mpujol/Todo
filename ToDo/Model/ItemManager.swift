@@ -6,7 +6,7 @@
 //  Copyright © 2018 Michael Pujol. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ItemManager: NSObject {
  
@@ -18,6 +18,48 @@ class ItemManager: NSObject {
     }
     private var toDoItems: [ToDoItem] = []
     private var doneItems: [ToDoItem] = []
+    
+    var todoPathURL: URL {
+        let fileURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        guard let documentURL = fileURLs.first else {
+            print("Something went wrong. Documents url could not be found")
+            fatalError()
+        }
+        return documentURL.appendingPathComponent("toDoItems.plist")
+    }
+
+    override init() {
+        super.init()
+        if let nsTodoItems = NSArray(contentsOf: todoPathURL) {
+            for dict in nsTodoItems {
+                if let toDoItem = ToDoItem(dict: dict as! [String: Any]) {
+                    toDoItems.append(toDoItem)
+                }
+            }
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(save), name: UIApplication.willResignActiveNotification, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+        save()
+    }
+    
+    @objc func save() {
+        let nsToDoItems = toDoItems.map { $0.plistDict }
+        guard nsToDoItems.count > 0 else {
+            try? FileManager.default.removeItem(at: todoPathURL)
+            return
+        }
+        do {
+            let plistData = try PropertyListSerialization.data(fromPropertyList: nsToDoItems, format: PropertyListSerialization.PropertyListFormat.xml, options: PropertyListSerialization.WriteOptions(0))
+            try plistData.write(to: todoPathURL, options: Data.WritingOptions.atomic)
+        } catch {
+            print(error)
+        }
+    }
     
     func add(_ item: ToDoItem){
         if !toDoItems.contains(item) {
@@ -43,7 +85,7 @@ class ItemManager: NSObject {
         return doneItems[index]
     }
     
-    func removeAll() {
+    func removeAllItems() {
         toDoItems.removeAll()
         doneItems.removeAll()
     }

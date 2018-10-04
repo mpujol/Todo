@@ -87,6 +87,15 @@ class LocationTests: XCTestCase {
         XCTAssertNotEqual(firstLocation, secondLocation)
     }
     
+    func test_CanBeSerializedAndDeserialized() {
+        let location = Location(name: "Home", coordinate: CLLocationCoordinate2D(latitude: 50.0, longitude: 6.0))
+        let dict = location.plistDict
+        
+        XCTAssertNotNil(dict)
+        let recreatedLocation = Location(dict: dict)
+        XCTAssertEqual(location, recreatedLocation)
+    }
+    
 }
 
 
